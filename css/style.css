@@ -22,7 +22,7 @@ header {
     #ff3c00 75%,
     #cc2200 90%,
     #660000 100%);
-    color: var(--black);
+    color: var(--preto);
     padding: 20px;
     text-align: center;
 }
@@ -33,8 +33,20 @@ header h1 {
     margin: 0;
 }
 
+/* Logo responsiva */
+header img{
+    max-width:100%;
+    height:auto;
+}
+
+/* Menu */
+
+nav {
+    margin-top:10px;
+}
+
 nav a {
-    color: var(--black);
+    color: var(--preto);
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
@@ -61,7 +73,6 @@ h2 {
 /* Personagens */
 
 .personagens-container {
-    
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -95,12 +106,12 @@ h2 {
     height: 200px;
     object-fit: contain;
     border-radius: 10px;
+    max-width:100%;
 }
 
 /* Vídeo */
 
 .video-container {
-    
     display: flex;
     justify-content: center;
 }
@@ -120,7 +131,7 @@ footer {
     #ff3c00 75%,
     #cc2200 90%,
     #660000 100%);
-    color: var(--black);
+    color: var(--preto);
     text-align: center;
     padding: 20px;
     margin-top: 30px;
@@ -175,7 +186,7 @@ footer a {
 /* Container responsivo do vídeo */
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* proporção 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     border-radius: 15px;
@@ -194,9 +205,45 @@ footer a {
     border-radius: 10px;
 }
 
-/* Efeito hover estilo Naruto */
+/* Hover estilo Naruto */
 #trailer:hover {
     transform: scale(1.02);
     transition: 0.3s ease-in-out;
 }
 
+/* ================================= */
+/*        RESPONSIVIDADE CELULAR     */
+/* ================================= */
+
+@media (max-width:768px){
+
+    header h1{
+        font-size:35px;
+    }
+
+    nav{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    section{
+        padding:20px;
+        margin:10px;
+    }
+
+    .personagens-container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:90%;
+    }
+
+    iframe{
+        width:100%;
+        height:auto;
+    }
+
+}
